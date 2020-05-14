@@ -10,7 +10,17 @@ basepkgs = ' '.join([
     'man-db', 
     'man-pages', 
     'less', 
-    'textinfo'
+    'texinfo'
+])
+
+gnome = ' '.join([
+    'gnome',
+    'gnome-extra',
+    'gnome-shell-extensions'
+])
+
+otherpkgs = ' '.join([
+    'firefox'
 ])
 
 
@@ -53,5 +63,11 @@ runCMD(f'mount {root} /mnt')
 
 print('pacstrap base')
 run(f'pacstrap /mnt {basepkgs}', shell=True)
+
+print('pacstrap gnome')
+run(f'pacstrap /mnt {gnome}', shell=True)
+
+print('pacstrap other packages')
+run(f'pacstrap /mnt {otherpkgs}')
 
 
