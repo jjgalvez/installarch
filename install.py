@@ -32,6 +32,6 @@ print('format disks')
 if swap := input('enter swapt Partition: ').strip():
     printCMDOutput(f'mkswap {swap}')
 if root := input('enter root Partition: ').strip():
-    printCMDOutput(f'mksf.ext4 {root}')
+    printCMDOutput(f'mkfs.ext4 {root}')
 
 
