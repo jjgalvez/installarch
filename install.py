@@ -29,4 +29,5 @@ printCMDOutput('fdisk -l')
 
 disk = input('Select disk to format: ').strip()
 print(disk)
+runCMD('gdisk')
 
