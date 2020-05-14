@@ -1,4 +1,18 @@
 from subprocess import run
+ 
+ base = ' '.join([
+     'base', 
+     'linux', 
+     'linux-lts', 
+     'linux-firmware',
+      'networkmanager', 
+      'nano', 
+      'man-db', 
+      'man-pages', 
+      'less', 
+      'textinfo'
+ ])
+
 
 def runCMD(cmd):
     out = run(cmd, shell=True, capture_output=True, text=True)
@@ -33,5 +47,11 @@ if swap := input('enter swapt Partition: ').strip():
     printCMDOutput(f'mkswap {swap}')
 if root := input('enter root Partition: ').strip():
     printCMDOutput(f'mkfs.ext4 {root}')
+
+print('Mount root')
+runCMD(f'mount {root} /mnt')
+
+print('pacstrap base')
+run(f'pacstrap /mnt {base}', shell=True)
 
 
