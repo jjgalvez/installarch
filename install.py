@@ -30,8 +30,8 @@ run('gdisk', shell=True)
 printCMDOutput('fdisk -l')
 print('format disks')
 if swap := input('enter swapt Partition: ').strip():
-    runCMD(f'mkswap {swap}')
+    printCMDOutput(f'mkswap {swap}')
 if root := input('enter root Partition: ').strip():
-    runCMD(f'mksf.ext4 {root}')
+    printCMDOutput(f'mksf.ext4 {root}')
 
 
