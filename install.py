@@ -10,7 +10,8 @@ basepkgs = ' '.join([
     'man-db', 
     'man-pages', 
     'less', 
-    'texinfo'
+    'texinfo',
+    'base-devel'
 ])
 
 gnome = ' '.join([
