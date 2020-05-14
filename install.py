@@ -1,6 +1,6 @@
 from subprocess import run
  
- base = ' '.join([
+ basepkgs = ' '.join([
      'base', 
      'linux', 
      'linux-lts', 
@@ -52,6 +52,6 @@ print('Mount root')
 runCMD(f'mount {root} /mnt')
 
 print('pacstrap base')
-run(f'pacstrap /mnt {base}', shell=True)
+run(f'pacstrap /mnt {basekpgs}', shell=True)
 
 
