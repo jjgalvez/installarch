@@ -1,17 +1,17 @@
 from subprocess import run
  
- basepkgs = ' '.join([
-     'base', 
-     'linux', 
-     'linux-lts', 
-     'linux-firmware',
-      'networkmanager', 
-      'nano', 
-      'man-db', 
-      'man-pages', 
-      'less', 
-      'textinfo'
- ])
+basepkgs = ' '.join([
+    'base', 
+    'linux', 
+    'linux-lts', 
+    'linux-firmware',
+    'networkmanager', 
+    'nano', 
+    'man-db', 
+    'man-pages', 
+    'less', 
+    'textinfo'
+])
 
 
 def runCMD(cmd):
