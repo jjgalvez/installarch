@@ -52,6 +52,6 @@ print('Mount root')
 runCMD(f'mount {root} /mnt')
 
 print('pacstrap base')
-run(f'pacstrap /mnt {basekpgs}', shell=True)
+run(f'pacstrap /mnt {basepkgs}', shell=True)
 
 
