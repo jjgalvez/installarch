@@ -21,4 +21,7 @@ print('EFI') if runCMD('ls /sys/firmware/efi/efivars') else print('BIOS')
 
 # update system clock
 print('Updating system clock')
-printCMDOutput('timedatectl set-ntp true')
+runCMD('timedatectl set-ntp true')
+
+#print disk info
+printCMDOutput('fdisk -l')
