@@ -23,11 +23,6 @@ print('EFI') if runCMD('ls /sys/firmware/efi/efivars') else print('BIOS')
 print('Updating system clock')
 runCMD('timedatectl set-ntp true')
 
-#print disk info
-print('disk info')
-printCMDOutput('fdisk -l')
-
-disk = input('Select disk to format: ').strip()
-print(disk)
-runCMD('gdisk')
+#format disk
+print('use gdisk to format disk')
 
