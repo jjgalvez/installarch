@@ -24,5 +24,7 @@ print('Updating system clock')
 runCMD('timedatectl set-ntp true')
 
 #format disk
+print('disk info')
+printCMDOutput('fdisk -l')
 print('use gdisk to format disk')
 
