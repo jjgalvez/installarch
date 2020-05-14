@@ -26,5 +26,5 @@ runCMD('timedatectl set-ntp true')
 #format disk
 print('disk info')
 printCMDOutput('fdisk -l')
-print('use gdisk to format disk')
+run('gdisk', shell=True)
 
