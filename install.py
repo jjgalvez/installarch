@@ -31,7 +31,7 @@ printCMDOutput('fdisk -l')
 print('format disks')
 if swap := input('enter swapt Partition: ').strip():
     runCMD(f'mkswap {swap}')
-if root := input('enter root Partition: ').strop():
+if root := input('enter root Partition: ').strip():
     runCMD(f'mksf.ext4 {root}')
 
 
